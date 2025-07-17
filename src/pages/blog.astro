@@ -1,15 +1,44 @@
 ---
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogArticle from '../components/BlogArticle.astro';
 
 const pageTitle = "My Astro Learning Blog"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
+  <!-- <p>This is where I will post about my journey learning Astro.</p>
   <ul>
     <li><a href="/posts/post-1/">Post 1</a></li>
     <li><a href="/posts/post-2/">Post 2</a></li>
     <li><a href="/posts/post-3/">Post 3</a></li>
-  </ul>
+  </ul> -->
+  <section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+      <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{pageTitle}</h2>
+      <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">This is where I will post about my journey learning Astro.</p>
+    </div> 
+    <div class="grid gap-8 lg:grid-cols-2">
+      <BlogArticle 
+        header="Getting Started with Astro - My First Impressions"
+        paragraph="Starting my journey with Astro has been exciting. Coming from traditional frameworks, I was surprised at how Astro lets you ship less JavaScript by default, making it feel incredibly fast and modern."
+        link="/posts/post-1/"
+        tags="Getting Started"
+      />
+      <BlogArticle 
+        header="Building My First Astro Project with Tailwind CSS"
+        paragraph="I integrated Tailwind CSS into my Astro project, and the experience felt seamless. From styling components to customizing layouts, Astro's support for Tailwind out of the box was a huge productivity boost."
+        link="/posts/post-2/"
+        tags="Web Development"
+      />
+      <BlogArticle 
+        header="Deploying My Astro Site on Netlify"
+        paragraph="Once my Astro project was ready, deploying it to Netlify was incredibly simple. With automatic builds and continuous deployment, updates are now just a push away."
+        link="/posts/post-3/"
+        tags="Deployment"
+      />
+    </div>  
+  </div>
+</section>
 </BaseLayout>
