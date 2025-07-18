@@ -1,12 +1,29 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { Image } from 'astro:assets';
+import avatar from '../assets/profile_avatar_placeholder_large.png'
 import '../styles/global.css';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-  <p class="mb-4">{frontmatter.pubDate.toString().slice(0,10)}</p>
-  <p class="mb-4"><em>{frontmatter.description}</em></p>
-  <p class="mb-2">Written by: {frontmatter.author}</p>
-  <img class="mb-2" src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <slot />
+  <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+    <header class="mb-4 lg:mb-6 not-format">
+      <address class="flex items-center mb-6 not-italic">
+        <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+          <Image class="mr-4 w-16 h-16 rounded-full" src={avatar} alt="avatar-png" />
+          <div>
+            <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{frontmatter.author}</a>
+            <p class="text-base text-gray-500 dark:text-gray-400">Software Developer</p>
+            <p class="text-base text-gray-500 dark:text-gray-400"><time datetime="2022-02-08" title="February 8th, 2022">{frontmatter.pubDate.toString().slice(0,10)}</time></p>
+          </div>
+        </div>
+      </address>
+      <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">{frontmatter.title}</h1>
+    </header>
+    <p class="lead">{frontmatter.description}</p>
+    <figure><img src={frontmatter.image.url} alt={frontmatter.image.alt}>
+      <figcaption>Digital art by Anonymous</figcaption>
+    </figure>
+    <slot /> 
+  </article>
 </BaseLayout>
