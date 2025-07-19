@@ -1,12 +1,16 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My First Blog Post'
-pubDate: 2022-07-01
+pubDate: 2025-07-01
 description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+author: 'Gelo Errazo'
+occupation: 'Software Developer'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
+avatar:
+    url: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png'
+    alt: 'unknown avatar'
 tags: ["astro", "blogging", "learning in public"]
 ---
 
