@@ -4,6 +4,8 @@ import Greeting from '../components/Greeting';
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
+  <div class="flex flex-col items-center py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <h2 class="text-3xl lg:text-4xl mb-4 tracking-tight font-extrabold text-center text-gray-900 dark:text-white">My awesome blog subtitle</h2>
+    <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
+  </div>
 </BaseLayout>
