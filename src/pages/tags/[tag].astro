@@ -20,18 +20,20 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 <BaseLayout pageTitle={tag}>
-  <h2 class="text-xl mt-6 mb-4">Posts tagged with <span class="font-medium">{tag}</span>:</h2>
-  <div class="grid gap-8 grid-cols-1">
-    {posts.map((post: any) => (
-      <BlogArticle 
-        author={post.frontmatter.author}
-        title={post.frontmatter.title}
-        paragraph={post.frontmatter.description}
-        link={post.url}
-        tags={post.frontmatter.tags || 'Blog'}
-        avatar={post.frontmatter.avatar}
-        date={post.frontmatter.pubDate}
-      />
-    ))}
-  <div/>
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <h2 class="mb-4 text-left text-2xl lg:text-3xl tracking-tight font-normal text-gray-900 dark:text-white">Posts tagged with <span class="font-medium">{tag}</span>:</h2>
+    <div class="grid gap-8 grid-cols-1">
+      {posts.map((post: any) => (
+        <BlogArticle 
+          author={post.frontmatter.author}
+          title={post.frontmatter.title}
+          paragraph={post.frontmatter.description}
+          link={post.url}
+          tags={post.frontmatter.tags || 'Blog'}
+          avatar={post.frontmatter.avatar}
+          date={post.frontmatter.pubDate}
+        />
+      ))}
+    <div/>
+  </div>
 </BaseLayout>
