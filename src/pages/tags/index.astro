@@ -8,12 +8,14 @@ const pageTitle = "Tag Index"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="max-w-96 p-6 pb-4 mt-6 mb-6 font-medium text-gray-500 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">
-    <h4 class="mb-4 font-bold text-gray-900 uppercase dark:text-white">Tags</h4>
-    <div class="flex flex-wrap">
-      {tags.map(tag => (
-        <a class="bg-primary-50 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 hover:bg-blue-200 dark:hover:bg-blue-300 dark:text-blue-800 mb-2" href={`/tags/${tag}`}>#{tag}</a>
-      ))}
+  <div class="flex justify-center py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="max-w-96 p-6 pb-4 mt-6 mb-6 font-medium text-gray-500 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">
+      <h4 class="mb-4 font-bold text-gray-900 uppercase dark:text-white">Tags</h4>
+      <div class="flex flex-wrap">
+        {tags.map(tag => (
+          <a class="bg-primary-50 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 hover:bg-blue-200 dark:hover:bg-blue-300 dark:text-blue-800 mb-2" href={`/tags/${tag}`}>#{tag}</a>
+        ))}
+      </div>
     </div>
   </div>
 </BaseLayout>
