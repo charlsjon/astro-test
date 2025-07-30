@@ -33,6 +33,5 @@ collections:
         name: "tags"
         widget: "list"
         allow_add: true
-        widget: "string"
 
 site_url: https://charls-astro-test.netlify.app/
