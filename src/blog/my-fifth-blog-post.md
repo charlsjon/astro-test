@@ -14,6 +14,6 @@ avatar:
   alt: incognito
 tags:
   - astro
-  - decap_cms
-  - headless_cms
+  - decap cms
+  - headless cms
 ---
