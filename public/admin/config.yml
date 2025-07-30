@@ -33,9 +33,6 @@ collections:
         name: "tags"
         widget: "list"
         allow_add: true
-        field:
-          label: "Tag"
-          name: "tag"
-          widget: "string"
-# test
+        field: "string"
+
 site_url: https://charls-astro-test.netlify.app/
