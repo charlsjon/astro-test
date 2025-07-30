@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: "public/static/images/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/static/images/uploads" # The src attribute for uploaded media
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in frontmatter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Occupation", name: "occupation", widget: "string" }
+      - label: "Image"
+        name: "image"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "Url", name: "url", widget: "image"}
+          - {label: "Alt", name: "alt", widget: "string"}
+      - label: "Avatar"
+        name: "avatar"
+        widget: "object"
+        collapsed: false
+        fields:
+          - {label: "Url", name: "url", widget: "image"}
+          - {label: "Alt", name: "alt", widget: "string"}
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        fields:
+          - {label: "Tag", name: "tag", widget: "string"}
+
+site_url: https://charls-astro-test.netlify.app/

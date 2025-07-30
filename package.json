@@ -13,6 +13,7 @@
     "@astrojs/rss": "^4.0.12",
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.12.4",
+    "decap-cms-app": "^3.8.2",
     "flowbite": "^3.1.2",
     "flowbite-typography": "^1.0.5",
     "moment": "^2.30.1",
