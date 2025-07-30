@@ -13,5 +13,7 @@ avatar:
   url: /static/images/uploads/profile_avatar_placeholder_large.png
   alt: incognito
 tags:
-  - Astro
+  - astro
+  - decap_cms
+  - headless_cms
 ---
