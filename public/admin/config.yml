@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main # Branch to update (optional; defaults to master)
+  repo: charlsjon/astro-test
 media_folder: "public/static/images/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "/static/images/uploads" # The src attribute for uploaded media
 collections:
